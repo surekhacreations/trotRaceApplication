@@ -1,0 +1,17 @@
+{
+    "statusCode": {
+        "successfulRequest": 200,
+        "requestTimedOut": 204,
+        "unAuthorized": 401,
+        "serverBusy": 503
+    },
+    "userDetails" : {
+        "email": "surekha@gmail.com",
+        "password": "lTgAYaLP9jRs"
+    },
+    "serverDetails": {
+        "host" : "http://35.207.169.147",
+        "authenticatePath" : "/auth",
+        "fetchResultsPath": "/results"
+    }
+}
