@@ -1,5 +1,9 @@
+const config = require("../utility/config.json");
 
+const unAuthorizedError = (err) => {
+    const error = new Error(err);
+    error.statusCode = config.statusCode.unAuthorized;
+    return error;
+};
 
-function unAuthorized() {
-    
-}
+module.exports.unAuthorizedError = unAuthorizedError;

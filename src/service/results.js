@@ -1,5 +1,6 @@
 const got = require('got');
 const config = require("../utility/config.json");
+const authError = require("../utility/error.js");
 
 const getResults = async (token) => {
     try{
@@ -11,10 +12,8 @@ const getResults = async (token) => {
 	    });
         return body;
     } catch(err) { 
-        console.log("Error in results...!!", err);
-        const error = new Error("Unauthorised")
-        error.statusCode = config.statusCode.unAuthorized;
-        throw error;
+        console.error("Error: getResults: ", err);
+        throw authError.unAuthorizedError(err);
     }
 };
 

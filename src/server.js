@@ -4,7 +4,7 @@ require("./db/database").connect();
 const simulator = require("./service/simulator");
 
 try{
-    simulator.trotRaceSimulator()
+    simulator.trotRaceSimulator();
 } catch(error) {
     console.error("In catch...", error);
     simulator.trotRaceSimulator();

@@ -1,5 +1,6 @@
 const got = require('got');
 const config = require("../utility/config.json");
+const authError = require("../utility/error.js");
 
 const authenticate = async () => {
     try{
@@ -10,12 +11,10 @@ const authenticate = async () => {
             },
             responseType: 'json'
 	    });
-        return  authRes;
+        return authRes;
     } catch(err){
-        console.log("Error in authenticate...", err);
-        const error = new Error("Unauthorised")
-        error.statusCode = config.statusCode.unAuthorized;
-        throw error;
+        console.error("Error: authenticate:", err);
+        throw authError.unAuthorizedError(err);
     }
 	
 };
