@@ -1,9 +1,12 @@
 const Race = require("../model/raceSchema");
 
 const saveRace = async (raceData) => {
-	const race = await Race.create(raceData);
-    console.log("Race results fetched and saved in DB.");
-    return race;
+    try {
+        return await Race.create(raceData);
+    } catch(error) {
+        console.error("Error: saveRace: ", error);
+        process.exit(1);
+    }
 };
 
 module.exports.saveRace = saveRace;

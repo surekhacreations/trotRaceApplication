@@ -13,6 +13,7 @@ const fetchRaceResults = async (token) => {
                 trotRaceSimulator();
             } else if(statusCode === config.statusCode.successfulRequest) {
                 await raceResultHandler.saveRace(raceResp.body);
+                console.log("Race results fetched. Saving them in DB.");
                 fetchRaceResults(token);
             }
         }

@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const { MONGO_URI } = process.env;
+const { MONGO_URI, DB_NAME } = process.env;
 
 exports.connect = () => {
-    mongoose.connect(MONGO_URI, {
+    mongoose.connect(MONGO_URI+DB_NAME, {
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
