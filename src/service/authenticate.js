@@ -3,7 +3,7 @@ const config = require("../utility/config.json");
 const authError = require("../utility/error.js");
 
 const authenticate = async () => {
-	try{
+	try{ //authenticate the user
 		const authRes = await got.post(config.serverDetails.host + config.serverDetails.authenticatePath, {
 			json: {
 				email: config.userDetails.email,

@@ -3,7 +3,7 @@ const config = require("../utility/config.json");
 const authError = require("../utility/error.js");
 
 const getResults = async (token) => {
-	try{
+	try{ // fetch race data from the server using auth token
 		const body = await got.get(config.serverDetails.host + config.serverDetails.fetchResultsPath, {
 			headers: {
 				"Authorization": "Bearer " + token

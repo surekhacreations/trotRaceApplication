@@ -1,11 +1,11 @@
 # trotRaceApplication
 Steps to run the application :
-1. npm install yarn      #not required if yarn already installed
+1. npm install yarn      #skip if already installed
 2. yarn install          #install project dependencies 
 2. Mongo DB [Optional. Please read below "Points to Know" point no 5]: 
     a) Update .env file present in the root directory
         i) replace username & password of MONGO_URI in with your Mongo DB   username and password
-        ii) replace DB_NAME value with your Mongo DB Name
+        ii) replace DB_NAME value with your Mongo DB Name [optional]
 3. Email Address update [optional] :
     a) Update file src->utility->config.json.
     b) Replace value of "email" with your email ID.

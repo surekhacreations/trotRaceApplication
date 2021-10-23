@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+// structure of our database collection/table
 const raceSchema = new mongoose.Schema({
 	event: {
 		type: String,
