@@ -9,11 +9,15 @@ Steps to run the application :
 3. Email Address update [optional] :
     a) Update file src->utility->config.json.
     b) Replace value of "email" with your email ID.
-4. Check lint errors using command :
+4. Integration test configuration :
+    Update .env file's TEST_DB_CONN field with your test database url. Else replace username and password in this value.
+5. Token [Optional] : 
+    Replace TOKEN value with any string in .env file. By default a token string is already provided.
+6. Check lint errors using command :
     yarn lint
-5. Run integration tests against Mongo DB using command :
+7. Run integration tests against Mongo DB using command :
     yarn test
-4. Run the application using command :
+8. Run the application using command :
     yarn start
 
 
@@ -24,5 +28,4 @@ Steps to run the application :
 2. App uses this token to make request to /results API
 3. App keep receiving the race data, which it keeps saving in Mongo DB
 4. Fetching of results is independent of DB connection, as data is fetched from the server, whereas the mongo DB connection is either local or on cloud.
-5. Mongo DB : I am using cloud service to store race Data in Mongo DB. The same credentials can be used to operate this app if required. Kindly get in touch with me to use my personal credentials.
-You would need MongoDBCompass App for the same.
+5. Mongo DB : I am using cloud service to store race Data in Mongo DB. The same credentials can be used to operate this app if required. Kindly get in touch with me to use my personal credentials. You would need MongoDBCompass App for the same.
